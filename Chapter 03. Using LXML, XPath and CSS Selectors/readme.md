@@ -173,3 +173,23 @@
 |CSS query|Mô tả|
 |-|-|
 |`a[href*="domain"]`|Chọn các thẻ `<a>` mà có chuổi con là '**domain**' tồn tại bên trong thuộc tính `href`, ví dụ `<a id="link" href="mailto:xyz@domain.com">Email Link1!</a><a href="mailto:abc@domain.com">Email Link2!</a>`|
+|`a[href*="domain"]`|Chọn các thẻ `<a>` có thuộc tính `href` bắt đầu bằng một chuổi con la '**mailto**'.|
+|`a[href$="pdf"]`|Chọn các thẻ `<a>` có thuộc tính `href` kết thúc bằng chuổi con là '**pdf**'.|
+|`[href~=do]`|Chọn các thẻ có thuộc tính `href` chứa chuổi con '**do**' bên trong.|
+|`[class]`|Chọn các thẻ có khai báo thuộc tính `class` bên trong.|
+|`[class=plan]`|Chọn các thẻ có thuộc tính `class=plan`.|
+
+### 2.2.4. Pseudo selectors
+|CSS query|Mô tả|
+|-|-|
+|`a:gt(0)`|Lấy tất cả các thẻ `<a>` có index lớn hơn $0$.|
+|`a:eq(2)`|Lấy the `<a>` tại index bằng $2$.|
+|`a:first-child`|Lấy các thẻ `<a>` là thẻ con đầu tiên của một thẻ nào đó.|
+|`a:last-child`|Lấy các thẻ `<a>` là thẻ con cuối cùng của một thẻ nào đó.|
+|`a:last-of-type`
+|`:not(p)`|Lấy tất cả các thẻ trừ thẻ `<p>`.|
+
+# 3. Using web browser developer tools for accessing web content
+# 4. Scraping using lxml, a Python library
+## 4.1. `lxml` by examples
+### 4.1.1. Example 1 – reading XML from file and traversing through its elements
