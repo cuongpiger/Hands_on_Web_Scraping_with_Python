@@ -110,4 +110,53 @@
   |`//book[@price<30]/title`|Lấy thẻ `<title>` từ các thẻ `<book>` mà có thuộc tính `price` lớn hơn 30, [ví dụ](images/03_22.png).|
   |`//book/@id`|Chọn thuộc tính `id` từ tất cả các thẻ `<book>`, [ví dụ](images/03_23.png).|
   |`//book[@id=1491939362]/author`|Chọn thẻ `<author>` của thẻ `<book>` có thuộc tính `id` bằng $1491939362$, [ví dụ](images/03_24.png).|
-  
+
+## 2.2. CSS Selectors
+* Đối với CSS Selector có thể dùng trang web này [https://try.jsoup.org](https://try.jsoup.org).
+* Giả sử có trang [`page.html`](page.html) như sau:
+```html
+<html>
+  <head>
+    <title>CSS Selectors: Testing</title>
+    <style>
+      h1 {
+        color: black;
+      }
+      .header,
+      .links {
+        color: blue;
+      }
+      .plan {
+        color: black;
+      }
+      #link {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Main Title</h1>
+    <p class="”header”">Page Header</p>
+    <div class="links">
+      <a class="plan" href="*.pdf">Document Places</a>
+      <a id="link" href="mailto:xyz@domain.com">Email Link1!</a>
+      <a href="mailto:abc@domain.com">Email Link2!</a>
+    </div>
+  </body>
+</html>
+```
+
+### 2.2.1. Element selectors
+|CSS query|Mô tả|
+|-|-|
+|`h1`|Lấy tất cả các thẻ `<h1>`, [ví dụ](images/03_25.png).|
+|`a`|Lấy tất cả các thẻ `<a>`, [ví dụ](images/03_26.png).|
+|`*`|Lấy tất cả các thẻ tồn tại trong tài liệu, [ví dụ](images/03_27.png).|
+|`body *`|Lấy tất cả các thẻ nằm trong thẻ `<body>`, [ví dụ](images/03_28.png).|
+|`div a`|Lấy tất cả các thẻ `<a>` nằm bên trong các thẻ `<div>`, [ví dụ](images/03_29.png).|
+|`h1+p`|Lấy tất cả thẻ `<p>` mà là **em** (em là cùng cấp đó mấy ba) của thẻ `<h1>`, [ví dụ](images/03_30.png).|
+|`h1~p`|Lấy tất cả thẻ `<p>` mà có **chị** là thẻ `<h1>`, [ví dụ](images/03_31.png).|
+|`h1,p`|Lấy tất cả các thẻ `<h1>` và `<p>`, [ví dụ](images/03_32.png).|
+|`div>a`|Lấy tất cả thẻ `<a>` mà là **con** (con nha, ko phải cháu) của thẻ `<div>`, [ví dụ](images/03_33.png).|
+
+### 2.2.2. ID and class selectors
