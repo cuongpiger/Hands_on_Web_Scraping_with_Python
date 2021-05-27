@@ -79,4 +79,7 @@
   |`//food[last()]/name/text()`|Lấy content của thẻ `<name>` lồng trong thẻ `<food>` cuối cùng, [ví dụ](images/03_12.png).|
   |`sum(//food/feedback)`|Lấy tổng của tất cả thẻ `<feedback>` lồng trong thẻ `<food>`, [ví dụ](images/03_13.png).|
   |`//food[rating>3 and rating<5]/name`|Lấy tất cả thẻ `<food>` có thẻ `<rating>` lồng bên trong nằm trong khoảng $[3, 5]$, [ví dụ](images/03_14.png).|
-  
+  |`//food/name[contains(.,"Juice")]`|Chọn các thẻ `<name>` có chứa chuổi '**Juice**' nằm lồng trong thẻ `<food>`, [ví dụ](images/03_15.png).|
+  |`//food/description[starts-with(.,"Fresh")]/text()`|Lấy content của các thẻ `<description>` bắt đầu bằng chuổi '**Fresh**' nằm lồng trong thẻ `<food>`, [ví dụ](images/03_16.png).|
+  |`//food/description[starts-with(.,"Fresh")]`|Chọn các thẻ `<description>` bắt đầu bằng chuổi '**Fresh**' nằm lồng trong thẻ `<food>`, [ví dụ](images/03_17.png).|
+  |`//food[position()<3]` <mark>**(XPath đánh số từ 1, ko phải từ 0)**</mark>|Chọn hai thẻ `<food>` đầu tiên, [ví dụ](images/03_18.png).|
