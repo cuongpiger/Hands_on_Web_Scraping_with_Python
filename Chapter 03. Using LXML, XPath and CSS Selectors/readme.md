@@ -55,3 +55,18 @@
   //food
   ```
   ![](images/03_00.png)
+
+* Để lấy tất cả các thẻ `<price>`, thì XPath-expression là:
+  ```xpath
+  //food/price
+  ```
+  ![](images/03_01.png)
+
+* Dưới đây là các XPath-expression mà hay sử dụng:
+  |XPath-expression|Mô tả|
+  |-|-|
+  |`//<tag>`|Chọn tất cả các thẻ `<tag>` trong tài liệu bất kể chúng nằm ở đâu, [ví dụ](images/03_00.png).|
+  |`//*`|Chọn tất cả các thẻ trong tài liệu, [ví dụ](images/03_04.png).|
+  |`*`|Chọn tất cả các thẻ, [ví dụ](images/03_03.png).|
+  |`//food/name|//food/price`|Chọn tất cả thẻ `<name>` và `<price>` dc tìm thấy trong các thẻ `<food>`, [vi dụ](images/03_02.png).|
+  |
