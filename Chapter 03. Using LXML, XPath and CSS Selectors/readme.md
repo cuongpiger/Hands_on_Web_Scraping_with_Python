@@ -50,5 +50,8 @@
 </menus>
 ```
 * Có thể sử dụng trang web [https://codebeautify.org/Xpath-Tester](https://codebeautify.org/Xpath-Tester) để kiểm tra XPath
-* Ở đây ta thấy thẻ `<menus>` chứa nhiều thẻ `<food>` bên trong, để lấy tất các các thẻ `<food>` này, ta làm như sau:
+* Ở đây ta thấy thẻ `<menus>` chứa nhiều thẻ `<food>` bên trong, để lấy tất các các thẻ `<food>` này, thì XPath-expression của chúng ta là:
+  ```xpath
+  //food
+  ```
   ![](images/03_00.png)
