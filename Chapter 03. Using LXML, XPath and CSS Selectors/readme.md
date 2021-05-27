@@ -69,4 +69,14 @@
   |`//*`|Chọn tất cả các thẻ trong tài liệu, [ví dụ](images/03_04.png).|
   |`*`|Chọn tất cả các thẻ, [ví dụ](images/03_03.png).|
   |`//food/name|//food/price`|Chọn tất cả thẻ `<name>` và `<price>` dc tìm thấy trong các thẻ `<food>`, [vi dụ](images/03_02.png).|
-  |
+  |`//food/name`|Chọn tất cả thẻ `<name>` nằm bên trong thẻ `<food>`, [ví dụ](images/03_05.png).|
+  |`//food/name/text()`|Lấy content của tất cả các thẻ `<name>` lồng bên trong thẻ `<food>`, [ví dụ](images/03_06.png).|
+  |`//food/name|//rating`|Lấy tất cả thẻ `<rating>` hoặc thẻ `<name>` nằm lồng trong thẻ `<food>`, [ví dụ](images/03_07.png).|
+  |`//food[1]/name`|Lấy thẻ `<name>` trong thẻ `<food>` đầu tiên tìm dc, [ví dụ](images/03_08.png).|
+  |`//food[feedback<9]`|Lấy tất cả thẻ `<food>` mà có thẻ `<feedback>` nằm lồng bên trong nó nhỏ hơn 9, [ví dụ](images/03_09.png).|
+  |`//food[feedback<9]/name`|Lấy tất cả thẻ `<name>` nằm lồng trong các thẻ `<food>` có thẻ `<feedback>` lồng bên trong nhỏ hơn 9, [ví dụ](images/03_10.png).|
+  |`//food[last()]/name`|Chọn thẻ `<name>` lồng trong thẻ `<food>` cuối cùng, [ví dụ](images/03_11.png).|
+  |`//food[last()]/name/text()`|Lấy content của thẻ `<name>` lồng trong thẻ `<food>` cuối cùng, [ví dụ](images/03_12.png).|
+  |`sum(//food/feedback)`|Lấy tổng của tất cả thẻ `<feedback>` lồng trong thẻ `<food>`, [ví dụ](images/03_13.png).|
+  |`//food[rating>3 and rating<5]/name`|Lấy tất cả thẻ `<food>` có thẻ `<rating>` lồng bên trong nằm trong khoảng $[3, 5]$, [ví dụ](images/03_14.png).|
+  
