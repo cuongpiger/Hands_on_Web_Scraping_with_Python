@@ -83,3 +83,31 @@
   |`//food/description[starts-with(.,"Fresh")]/text()`|Lấy content của các thẻ `<description>` bắt đầu bằng chuổi '**Fresh**' nằm lồng trong thẻ `<food>`, [ví dụ](images/03_16.png).|
   |`//food/description[starts-with(.,"Fresh")]`|Chọn các thẻ `<description>` bắt đầu bằng chuổi '**Fresh**' nằm lồng trong thẻ `<food>`, [ví dụ](images/03_17.png).|
   |`//food[position()<3]` <mark>**(XPath đánh số từ 1, ko phải từ 0)**</mark>|Chọn hai thẻ `<food>` đầu tiên, [ví dụ](images/03_18.png).|
+
+<hr>
+
+* Tiếp theo, ta có file [`books.xml`](books.xml) như sau:
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+   <book id="1491946008" price="47.49">
+      <author>Luciano Ramalho</author>
+      <title>Fluent Python: Clear, Concise, and Effective Programming</title>
+   </book>
+   <book id="1491939362" price="29.83">
+      <author>Allen B. Downey</author>
+      <title>Think Python: How to Think Like a Computer Scientist</title>
+   </book>
+</books>
+```
+
+* Giả sử chúng ta cần truy cập vào thẻ có thuộc tính như ví dụ này chẳng hạn `id="1491946008"`, thì XPath cũng hộ trợ các expression để làm điều này:
+  |XPath-expression|Mô tả|
+  |-|-|
+  |`//book/@price`|Chọn thuộc tính `price` từ thẻ `<book>`, [ví dụ](images/03_19.png).|
+  |`//book`|Chọn tất cả thẻ `<book>`, [ví dụ](images/03_20.png).|
+  |`//book[@price>30]`|Chọn các thẻ `<book>` mà có thuộc tính `price` lớn hơn 30, [ví dụ](images/03_21.png).|
+  |`//book[@price<30]/title`|Lấy thẻ `<title>` từ các thẻ `<book>` mà có thuộc tính `price` lớn hơn 30, [ví dụ](images/03_22.png).|
+  |`//book/@id`|Chọn thuộc tính `id` từ tất cả các thẻ `<book>`, [ví dụ](images/03_23.png).|
+  |`//book[@id=1491939362]/author`|Chọn thẻ `<author>` của thẻ `<book>` có thuộc tính `id` bằng $1491939362$, [ví dụ](images/03_24.png).|
+  
