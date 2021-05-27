@@ -1,12 +1,5 @@
-from lxml import etree
+from selenium import webdriver
 
-xml = open("food.xml", "rb").read()
-tree = etree.XML(xml)
+browser = webdriver.Firefox()
 
-print(f"=>> {tree}")
-print("_"*20)
-print(f"=>> {type(tree)}")
-print("_"*20)
-
-for element in tree.iter():
-    print(f"    =>> {element.tag} - {element.text}")
+browser.get("http://www.ubuntu.com/")
