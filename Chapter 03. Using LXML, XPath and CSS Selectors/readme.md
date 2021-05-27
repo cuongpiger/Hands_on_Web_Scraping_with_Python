@@ -160,3 +160,16 @@
 |`div>a`|Lấy tất cả thẻ `<a>` mà là **con** (con nha, ko phải cháu) của thẻ `<div>`, [ví dụ](images/03_33.png).|
 
 ### 2.2.2. ID and class selectors
+|CSS query|Mô tả|
+|-|-|
+|`.header`|Chọn tất cả các thẻ có `class=header`.|
+|`.plan`|Chọn tất cả các thẻ có `class=plan`.|
+|`div.links`|Chọn tất cả các thẻ `<div>` có `class=link`.|
+|`#link`|Chọn thẻ có `id=link`.|
+|`a#link`|Chọn thẻ `<a>` có `id=link`.|
+|`a.plan`|Chọn thẻ `<a>` có `class=plan`.|
+
+### 2.2.3. Attribute selectors
+|CSS query|Mô tả|
+|-|-|
+|`a[href*="domain"]`|Chọn các thẻ `<a>` mà có chuổi con là '**domain**' tồn tại bên trong thuộc tính `href`, ví dụ `<a id="link" href="mailto:xyz@domain.com">Email Link1!</a><a href="mailto:abc@domain.com">Email Link2!</a>`|
